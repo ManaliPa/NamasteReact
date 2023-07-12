@@ -26,4 +26,4 @@ React. js builds your project in development mode, which includes features like 
 ready to deploy your application, it's important to build it in production mode to benefit from optimized performance and reduced bundle size.
 
 8.What are async and defer?
-
+ Async allows your script to run as soon as it's loaded, without blocking other elements on the page. Defer means your script will only execute after the page has finished loading.
