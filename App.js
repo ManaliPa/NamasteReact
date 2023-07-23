@@ -1,22 +1,23 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-const parent = React.createElement(
-  "div",
-  { id: "paremt" },
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("div", { id: "child1" }, "Hello World from parent"),
-    React.createElement("div", { id: "child1" }, "Hello wrld"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("div", { id: "child2" }, "Hello World from parent"),
-    React.createElement("div", { id: "child2" }, "Hello World from parent 2"),
-  ])
+
+//React component
+const elem = <span>Namste</span>
+const Title = () =>
+(
+    <h1 className="head" tabIndex="5">React Tutorial</h1>
 );
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Hello World from React"
-);
-console.log(parent);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+
+//Component composition means component inside component
+//Functional component
+const HeadingCom = () =>
+{    return (
+    <div id="container">
+        {elem}
+    <Title />
+    <h1 className="heading">Namaste React by Manali</h1>
+    </div>
+    )
+}
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<HeadingCom></HeadingCom>)
